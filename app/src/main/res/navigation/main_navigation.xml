@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/id_nav_menu_movie">
+
+    <fragment
+        android:id="@+id/id_nav_menu_movie"
+        android:name="com.app.jetpacksubmissionone.fragments.MovieFragment"
+        android:label="Movie"
+        tools:layout="@layout/fragment_movie">
+        <action
+            android:id="@+id/action_id_menu_movie_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/id_nav_menu_tv"
+        android:name="com.app.jetpacksubmissionone.fragments.TvFragment"
+        android:label="Tv Show">
+        <action
+            android:id="@+id/action_id_menu_tv_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.app.jetpacksubmissionone.fragments.DetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_detail" />
+</navigation>
